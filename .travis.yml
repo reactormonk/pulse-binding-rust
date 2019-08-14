@@ -1,6 +1,5 @@
 language: rust
 sudo: false
-dist: bionic
 rust:
   - 1.28.0 # Minimum supported version
   - stable
