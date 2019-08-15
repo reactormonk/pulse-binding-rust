@@ -10,7 +10,6 @@ matrix:
 addons:
   apt:
     packages:
-      - dbus-xll  # for dbus-launch
       - pulseaudio
       - libpulse-mainloop-glib0
 script:
