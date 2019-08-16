@@ -11,6 +11,7 @@ matrix:
 addons:
   apt:
     packages:
+      - dbux-x11
       - pulseaudio
       - libpulse-mainloop-glib0
 script:
