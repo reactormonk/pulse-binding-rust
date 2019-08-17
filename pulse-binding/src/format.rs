@@ -132,7 +132,7 @@ impl Encoding {
             true => None,
         }
     }
-
+/*
     /// Converts a string of the form returned by [`to_string`](#method.to_string) back to an
     /// `Encoding`.
     #[cfg(feature = "pa_v12_compatibility")]
@@ -142,6 +142,7 @@ impl Encoding {
         let c_enc = CString::new(encoding.clone()).unwrap();
         unsafe { capi::pa_encoding_from_string(c_enc.as_ptr()).into() }
     }
+*/
 }
 
 impl Info {
