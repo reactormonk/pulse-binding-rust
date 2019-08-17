@@ -140,3 +140,13 @@ pub mod utf8;
 pub mod util;
 pub mod version;
 pub mod volume;
+
+/// Just testing something, ignore...
+pub fn fake_func() {
+    unsafe { capi::pa_fake_func() };
+}
+/// Just testing something, ignore...
+#[cfg(feature = "pa_v12_compatibility")]
+pub fn fake_func2() {
+    unsafe { capi::pa_fake_func2() };
+}
