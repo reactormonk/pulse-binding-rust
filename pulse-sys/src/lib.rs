@@ -69,3 +69,9 @@ pub mod version;
 pub mod volume;
 pub mod xmalloc;
 
+#[link(name="pulse")]
+extern "C" {
+    pub fn pa_fake_func();
+    #[cfg(feature = "pa_v12_compatibility")]
+    pub fn pa_fake_func2();
+}
