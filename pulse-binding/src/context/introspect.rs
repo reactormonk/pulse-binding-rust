@@ -293,7 +293,7 @@ impl Drop for Introspector {
 ///
 /// Please note that this structure can be extended as part of evolutionary API updates at any time
 /// in any new release.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct SinkPortInfo<'a> {
     /// Name of this port.
     pub name: Option<Cow<'a, str>>,
@@ -330,7 +330,7 @@ impl<'a> SinkPortInfo<'a> {
 ///
 /// Please note that this structure can be extended as part of evolutionary API updates at any time
 /// in any new release.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct SinkInfo<'a> {
     /// Name of the sink.
     pub name: Option<Cow<'a, str>>,
@@ -675,7 +675,7 @@ fn get_sink_info_list_cb_proxy(_: *mut ContextInternal, i: *const SinkInfoIntern
 ///
 /// Please note that this structure can be extended as part of evolutionary API updates at any time
 /// in any new release.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct SourcePortInfo<'a> {
     /// Name of this port.
     pub name: Option<Cow<'a, str>>,
@@ -712,7 +712,7 @@ impl<'a> SourcePortInfo<'a> {
 ///
 /// Please note that this structure can be extended as part of evolutionary API updates at any time
 /// in any new release.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct SourceInfo<'a> {
     /// Name of the source.
     pub name: Option<Cow<'a, str>>,
