@@ -22,6 +22,7 @@ use std::marker::PhantomData;
 /// Fetching a list can result in a callback being fired for each list item, and then once to signal
 /// that the end of the list having been reached. This is used to distinguish such state to a
 /// closure callback.
+#[derive(Debug, Clone)]
 pub enum ListResult<T> {
     /// List item
     Item(T),

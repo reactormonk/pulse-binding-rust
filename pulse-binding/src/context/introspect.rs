@@ -1821,7 +1821,7 @@ fn get_card_info_list_cb_proxy(_: *mut ContextInternal, i: *const CardInfoIntern
 ///
 /// Please note that this structure can be extended as part of evolutionary API updates at any time
 /// in any new release.
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub struct SinkInputInfo<'a> {
     /// Index of the sink input.
     pub index: u32,
@@ -2053,7 +2053,7 @@ fn get_sink_input_info_list_cb_proxy(_: *mut ContextInternal, i: *const SinkInpu
 ///
 /// Please note that this structure can be extended as part of evolutionary API updates at any time
 /// in any new release.
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub struct SourceOutputInfo<'a> {
     /// Index of the source output.
     pub index: u32,
