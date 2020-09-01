@@ -379,6 +379,9 @@ pub struct SinkInfo<'a> {
     pub formats: Vec<format::Info>,
 }
 
+unsafe impl<'a> Send for SinkInfo<'a> {}
+unsafe impl<'a> Sync for SinkInfo<'a> {}
+
 impl<'a> SinkInfo<'a> {
     fn new_from_raw(p: *const SinkInfoInternal) -> Self {
         assert!(!p.is_null());
@@ -760,6 +763,9 @@ pub struct SourceInfo<'a> {
     /// Set of formats supported by the sink.
     pub formats: Vec<format::Info>,
 }
+
+unsafe impl<'a> Send for SourceInfo<'a> {}
+unsafe impl<'a> Sync for SourceInfo<'a> {}
 
 impl<'a> SourceInfo<'a> {
     fn new_from_raw(p: *const SourceInfoInternal) -> Self {
@@ -1866,6 +1872,9 @@ pub struct SinkInputInfo<'a> {
     pub format: format::Info,
 }
 
+unsafe impl<'a> Send for SinkInputInfo<'a> {}
+unsafe impl<'a> Sync for SinkInputInfo<'a> {}
+
 impl<'a> SinkInputInfo<'a> {
     fn new_from_raw(p: *const SinkInputInfoInternal) -> Self {
         assert!(!p.is_null());
@@ -2097,6 +2106,9 @@ pub struct SourceOutputInfo<'a> {
     /// Stream format information.
     pub format: format::Info,
 }
+
+unsafe impl<'a> Send for SourceOutputInfo<'a> {}
+unsafe impl<'a> Sync for SourceOutputInfo<'a> {}
 
 impl<'a> SourceOutputInfo<'a> {
     fn new_from_raw(p: *const SourceOutputInfoInternal) -> Self {

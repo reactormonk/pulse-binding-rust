@@ -104,6 +104,9 @@ pub enum Facility {
     Card = 9,
 }
 
+unsafe impl Send for Facility {}
+unsafe impl Sync for Facility {}
+
 /// Operation component of an event.
 #[repr(u32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]
@@ -115,6 +118,9 @@ pub enum Operation {
     /// An object was removed
     Removed = 0x20,
 }
+
+unsafe impl Send for Operation {}
+unsafe impl Sync for Operation {}
 
 impl Facility {
     fn from_int(value: u32) -> Option<Facility> {
